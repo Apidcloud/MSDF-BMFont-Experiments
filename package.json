@@ -9,6 +9,7 @@
   "author": "Luís Fernandes (a.k.a. Apidcloud)",
   "license": "ISC",
   "dependencies": {
-    "msdf-bmfont": "^1.0.1"
+    "msdf-bmfont": "^1.0.1",
+    "msdf-bmfont-xml": "2.3.1"
   }
 }
