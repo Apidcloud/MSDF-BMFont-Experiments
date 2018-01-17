@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "node generate.js",
-    "start": "npm test && electron ."
+    "start": "electron .",
+    "debug": "npm test && npm start"
   },
   "author": "Luís Fernandes (a.k.a. Apidcloud)",
   "license": "ISC",
