@@ -4,12 +4,21 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "author": "Luís Fernandes (a.k.a. Apidcloud)",
   "license": "ISC",
   "dependencies": {
     "msdf-bmfont": "^1.0.1",
     "msdf-bmfont-xml": "2.3.1"
+  },
+  "devDependencies": {
+    "electron": "1.7.10",
+    "load-bmfont": "1.3.0",
+    "run-parallel": "1.1.6",
+    "three": "0.89.0",
+    "three-bmfont-text": "2.2.1",
+    "xml2js": "0.4.19"
   }
 }
