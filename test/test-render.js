@@ -7,7 +7,8 @@ const fontPreloader = require("./fontPreloader");
 let scene, camera, renderer, mesh;
 const defaultText = "The quick brown fox jumped over the lazy dogs.";
 const text = defaultText;
-const fontFile = "output/DIN_CB.fnt";
+
+const fontFile = "fnt/OpenSans-Regular.json";
 
 function init() {
   const canvas = document.createElement("canvas");

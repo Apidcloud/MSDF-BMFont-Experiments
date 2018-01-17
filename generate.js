@@ -3,21 +3,28 @@
  */
 const generateBMFont = require('msdf-bmfont-xml');
 const fs = require('fs');
+const path = require('path');
 
-const font = "OpenSans-Regular.ttf";
+const fontName = "OpenSans-Regular.ttf";
+
+//const basename = path.basename(filename, path.extname(fontName));
 
 const opt = {
-    outputType: 'json'
+    outputType: "json",
+    distanceRange: 4,
+    smartSize: true,
+    pot: true,
   };
 
-generateBMFont('fnt/' + font, opt, (error, textures, font) => {
+generateBMFont('fnt/' + fontName, opt, (error, textures, font) => {
   if (error) throw error;
+
   textures.forEach((texture, index) => {
-    fs.writeFile("generated/" + `sheet${index}.png`, texture.texture, (err) => {
+    fs.writeFile(texture.filename + ".png", texture.texture, (err) => {
       if (err) throw err;
     });
   });
-  fs.writeFile("generated/font.json", font.data, (err) => {
+  fs.writeFile(font.filename, font.data, (err) => {
     if (err) throw err;
   });
 });

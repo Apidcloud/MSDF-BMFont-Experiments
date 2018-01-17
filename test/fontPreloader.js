@@ -15,9 +15,8 @@ module.exports = function (cb = noop, fontFile) {
     });
     return loadedResult;
   }
-  fs.readFile(path.join(__dirname, fontFile), (err, data) => {
-    parseXml(data, {mergeAttrs: true}, (err, fontNode) => {
-      let textureFile = path.join(__dirname, path.dirname(fontFile), fontNode.font.pages[0].page[0].file[0]);
+  fs.readFile(fontFile, (err, data) => {
+    const textureFile = path.join(path.dirname(fontFile), JSON.parse(data).pages[0]);
       parallel({
         texture: (next) => {
           let texture = new THREE.TextureLoader().load(textureFile, () => {
@@ -27,7 +26,7 @@ module.exports = function (cb = noop, fontFile) {
           });
         },
         font: (next) => {
-          loadBmfont(path.join(__dirname, fontFile), (err, font) => {
+          loadBmfont(fontFile, (err, font) => {
             if (err) return next(err);
             next(null, font);
           });
@@ -39,6 +38,5 @@ module.exports = function (cb = noop, fontFile) {
         cb(null, results);
       });
     });
-  });
   
 };
