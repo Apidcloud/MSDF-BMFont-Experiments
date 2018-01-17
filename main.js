@@ -5,17 +5,19 @@
 var generateBMFont = require('msdf-bmfont');
 var fs = require('fs');
 
-generateBMFont('fnt/OpenSans-Regular.ttf', (error, textures, font) => {
+const font = "OpenSans-Regular.ttf";
+
+generateBMFont('fnt/' + font, (error, textures, font) => {
     if (error)
     throw error;
 textures.forEach((sheet, index) => {
     font.pages.push(`sheet${index}.png`);
-fs.writeFile(`sheet${index}.png`, sheet, (err) => {
+fs.writeFile(`generated/sheet${index}.png`, sheet, (err) => {
     if (err)
     throw err;
 });
 });
-fs.writeFile('font.json', JSON.stringify(font), (err) => {
+fs.writeFile('generated/font.json', JSON.stringify(font), (err) => {
     if (err) throw err;
 });
 });
