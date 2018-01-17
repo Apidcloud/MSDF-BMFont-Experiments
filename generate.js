@@ -10,14 +10,14 @@ const opt = {
     outputType: 'json'
   };
 
-generateBMFont('fnt/' + font, (error, textures, font) => {
+generateBMFont('fnt/' + font, opt, (error, textures, font) => {
   if (error) throw error;
   textures.forEach((texture, index) => {
-    fs.writeFile("generatedPreBuilt/" + `sheet${index}.png`, texture.texture, (err) => {
+    fs.writeFile("generated/" + `sheet${index}.png`, texture.texture, (err) => {
       if (err) throw err;
     });
   });
-  fs.writeFile("generatedPreBuilt/font.json", font.data, (err) => {
+  fs.writeFile("generated/font.json", font.data, (err) => {
     if (err) throw err;
   });
 });
