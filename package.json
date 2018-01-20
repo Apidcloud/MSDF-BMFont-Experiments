@@ -8,7 +8,7 @@
     "start": "electron .",
     "debug": "npm test && npm start"
   },
-  "author": "Luís Fernandes (a.k.a. Apidcloud)",
+  "author": "Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "license": "MIT",
   "dependencies": {
     "msdf-bmfont-xml": "2.3.1"
