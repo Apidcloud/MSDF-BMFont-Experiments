@@ -5,7 +5,7 @@ const generateBMFont = require('msdf-bmfont-xml');
 const fs = require('fs');
 const path = require('path');
 
-const fontName = "OpenSans-Regular.ttf";
+const fontName = "arialbd.ttf";
 
 //const basename = path.basename(filename, path.extname(fontName));
 

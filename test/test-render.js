@@ -8,7 +8,7 @@ let scene, camera, renderer, mesh;
 const defaultText = "The quick brown fox jumped over the lazy dogs.";
 const text = defaultText;
 
-const fontFile = "fnt/OpenSans-Regular.json";
+const fontFile = "fnt/arialbd.json";
 
 function init() {
   const canvas = document.createElement("canvas");
