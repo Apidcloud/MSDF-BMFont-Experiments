@@ -11,9 +11,11 @@ const fontName = "arialbd.ttf";
 
 const opt = {
     outputType: "json",
-    distanceRange: 4,
+    distanceRange: 10, // spread
     smartSize: true,
     pot: true,
+    fontSize: 50,
+    texturePadding: 8 // padding between glyphs
   };
 
 generateBMFont('fnt/' + fontName, opt, (error, textures, font) => {
