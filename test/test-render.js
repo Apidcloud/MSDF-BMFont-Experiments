@@ -10,6 +10,8 @@ const text = defaultText;
 
 const fontFile = "fnt/arialbd.json";
 
+const generate = require("../generate");
+
 function init() {
   const canvas = document.createElement("canvas");
   canvas.style.display = "block";

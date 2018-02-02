@@ -3,11 +3,8 @@
  */
 const generateBMFont = require('msdf-bmfont-xml');
 const fs = require('fs');
-const path = require('path');
 
 const fontName = "arialbd.ttf";
-
-//const basename = path.basename(filename, path.extname(fontName));
 
 const opt = {
     outputType: "json",
@@ -18,7 +15,7 @@ const opt = {
     texturePadding: 8 // padding between glyphs
   };
 
-generateBMFont('fnt/' + fontName, opt, (error, textures, font) => {
+module.exports = generateBMFont('fnt/' + fontName, opt, (error, textures, font) => {
   if (error) throw error;
 
   textures.forEach((texture, index) => {
