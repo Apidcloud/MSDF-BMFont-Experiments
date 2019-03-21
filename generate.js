@@ -1,7 +1,7 @@
 /**
  * Created by Luis on 05/01/2017.
  */
-const generateBMFont = require('scarlett-msdf-bmfont-xml');
+const generateBMFont = require('msdf-bmfont-xml');
 const fs = require('fs');
 
 const fontName = "arialbd.ttf";

@@ -11,10 +11,10 @@
   "author": "Luís Fernandes aka Apidcloud <luisapidcloud@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "scarlett-msdf-bmfont-xml": "2.3.6"
+    "msdf-bmfont-xml": "2.4.0"
   },
   "devDependencies": {
-    "electron": "2.0.17",
+    "electron": "4.1.1",
     "load-bmfont": "1.3.0",
     "run-parallel": "1.1.6",
     "three": "0.89.0",
